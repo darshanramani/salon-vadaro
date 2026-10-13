@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salon Vadaro | Hair Salon in North York</title>
+<meta name="description" content="Salon Vadaro, 2035 Sheppard Ave E #2, North York. Cuts, colour, balayage, blowouts and styling with master stylist Joe. Rated 4.8 on Google. Call (416) 519-1140.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f7f4ee;--ink:#111110;--soft:#2a2925;--muted:#7d786d;--gold:#c2a36b;--lime:#9ccc3c;--line:#e4ddcf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font:300 16px/1.75 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.02}
+.label{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .35s}
+.btn-d{background:var(--ink);color:var(--ivory)}
+.btn-d:hover{background:var(--gold)}
+.btn-l{border:1px solid currentColor}
+.btn-l:hover{background:var(--ivory);color:var(--ink)}
+
+nav{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:.4s}
+nav.scrolled{background:rgba(17,17,16,.92);backdrop-filter:blur(10px)}
+.nav-in{height:80px;display:flex;justify-content:space-between;align-items:center}
+.logo{font:500 30px "Cormorant Garamond",serif;letter-spacing:.12em}
+.logo small{display:block;font:400 10px Inter;letter-spacing:.5em;color:var(--gold);margin-top:-4px}
+.links{display:flex;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.links a{opacity:.8}.links a:hover{opacity:1;color:var(--gold)}
+.burger{display:none;border:0;background:none;font-size:28px;cursor:pointer;color:#fff}
+.status{font-size:12px;letter-spacing:.1em;display:inline-flex;gap:8px;align-items:center}
+.status i{width:7px;height:7px;border-radius:50%;background:#999}.status.open i{background:var(--lime)}.status.closed i{background:#d9534f}
+
+.hero{position:relative;height:100svh;min-height:640px;color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero-img{position:absolute;inset:0;background:center/cover;opacity:.55;transform:scale(1.12);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,16,.35),rgba(17,17,16,.2) 40%,rgba(17,17,16,.9))}
+.hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:min(1200px,100% - 32px)}
+.hero h1{font-size:clamp(58px,10vw,150px);letter-spacing:-.01em}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero h1 .w span{display:inline-block;transform:translateY(105%);animation:up 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 em{color:var(--gold)}
+@keyframes up{to{transform:none}}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:26px}
+.hero p{max-width:460px;opacity:.85;font-size:17px}
+.strands{position:absolute;right:-60px;top:12%;width:min(620px,70vw);z-index:1;opacity:.55}
+.strands path{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 4s ease forwards}
+.strands path:nth-child(2){animation-delay:.3s}.strands path:nth-child(3){animation-delay:.6s}.strands path:nth-child(4){animation-delay:.9s}.strands path:nth-child(5){animation-delay:1.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+section{padding:120px 0}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro h2{font-size:clamp(40px,5vw,66px);margin:16px 0 24px}
+.intro h2 em{color:var(--gold)}
+.intro p{color:var(--muted);margin-bottom:16px}
+.intro .pics{position:relative;height:600px}
+.intro .pics div{position:absolute;background:#ddd center/cover}
+.intro .p1{inset:0 22% 18% 0}
+.intro .p2{width:52%;height:46%;right:0;bottom:0;border:10px solid var(--ivory)}
+.nums{display:flex;gap:44px;margin-top:34px}
+.nums b{display:block;font:500 54px/1 "Cormorant Garamond",serif}
+.nums span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+.services{background:var(--ink);color:var(--ivory)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;margin-bottom:60px}
+.svc-head h2{font-size:clamp(40px,5vw,66px);margin-top:14px}
+.svc-list{border-top:1px solid #33322d}
+.svc-row{display:grid;grid-template-columns:80px 1fr 1.2fr 40px;align-items:center;gap:20px;padding:30px 0;border-bottom:1px solid #33322d;transition:padding .4s,color .3s;cursor:default}
+.svc-row:hover{padding-left:14px;color:var(--gold)}
+.svc-row .n{font:500 20px "Cormorant Garamond";color:var(--gold)}
+.svc-row h3{font-size:clamp(28px,3.4vw,42px)}
+.svc-row p{color:#a6a093;font-size:15px}
+.svc-row .ar{font-size:22px;transition:transform .3s}
+.svc-row:hover .ar{transform:translateX(8px) rotate(-45deg)}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+.member{border:1px solid var(--line);padding:44px;position:relative;overflow:hidden;background:#fff}
+.member::before{content:attr(data-i);position:absolute;right:20px;bottom:-60px;font:500 220px/1 "Cormorant Garamond";color:#f1ece2}
+.member h3{font-size:44px;position:relative}
+.member .role{position:relative;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.member p{position:relative;color:var(--muted);margin-top:16px;max-width:420px}
+
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 280px;gap:12px}
+.gal button{border:0;padding:0;overflow:hidden;cursor:zoom-in;background:#ddd}
+.gal button:first-child{grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1),filter .6s;filter:grayscale(.25)}
+.gal button:hover img{transform:scale(1.06);filter:none}
+.lb{position:fixed;inset:0;background:rgba(17,17,16,.95);z-index:100;display:none;place-items:center;padding:20px}
+.lb.on{display:grid}.lb img{max-height:86vh}
+.lb button{position:absolute;top:16px;right:22px;background:none;border:0;color:#fff;font-size:40px;cursor:pointer}
+
+.testi{background:#efe9dd;text-align:center}
+.slider{position:relative;max-width:900px;margin:40px auto 0;min-height:260px}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s;pointer-events:none}
+.slide.on{opacity:1;position:relative;pointer-events:auto}
+.slide p{font:italic 500 clamp(24px,3.2vw,38px)/1.35 "Cormorant Garamond",serif}
+.slide b{display:block;margin-top:24px;font-size:12px;font-weight:500;letter-spacing:.26em;text-transform:uppercase}
+.ctrl{display:flex;justify-content:center;gap:16px;margin-top:34px}
+.ctrl button{width:52px;height:52px;border-radius:50%;border:1px solid var(--ink);background:none;cursor:pointer;font-size:18px;transition:.3s}
+.ctrl button:hover{background:var(--ink);color:var(--ivory)}
+.big-stars{color:var(--gold);letter-spacing:6px}
+
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:0;border:1px solid var(--line);background:#fff}
+.visit .info{padding:50px}
+.visit h2{font-size:52px;margin:12px 0 26px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--ink);font-weight:600}
+.hours tr.today td:first-child::before{content:"● ";color:var(--lime)}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;filter:grayscale(1) contrast(1.05)}
+.addr{margin:6px 0 24px;color:var(--muted)}
+
+footer{background:var(--ink);color:#a6a093;padding:60px 0 110px;text-align:center}
+footer .logo{color:var(--ivory);margin-bottom:14px}
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px}
+.callbar a{flex:1;justify-content:center;padding:15px 10px}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1 .w span{transform:none}.strands path{stroke-dashoffset:0}}
+@media (max-width:960px){
+  .links{display:none}
+  .links.open{display:flex;flex-direction:column;position:absolute;top:80px;left:0;right:0;background:var(--ink);padding:24px}
+  .burger{display:block}
+  .intro,.team-grid,.visit{grid-template-columns:1fr}
+  .intro{gap:40px}
+  .intro .pics{height:440px}
+  .svc-row{grid-template-columns:44px 1fr 30px}
+  .svc-row p{grid-column:2/3}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .gal button:first-child{grid-column:span 2;grid-row:auto}
+  .callbar{display:flex}
+}
+@media (max-width:600px){
+  section{padding:80px 0}
+  .visit .info,.member{padding:30px 22px}
+  .nums{gap:26px}.nums b{font-size:42px}
+  .status{display:none}
+}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav-in">
+  <a class="logo" href="#top">VADARO<small>SALON</small></a>
+  <div class="links" id="links"><a href="#about">About</a><a href="#services">Services</a><a href="#team">Stylists</a><a href="#gallery">Salon</a><a href="#visit">Visit</a></div>
+  <div style="display:flex;gap:16px;align-items:center"><span class="status" id="status"><i></i><span>…</span></span><button class="burger" id="burger" aria-label="Menu">☰</button></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="hero-img" data-bg="floor"></div>
+  <svg class="strands" viewBox="0 0 600 600" aria-hidden="true">
+    <path d="M580 20C420 120 520 260 360 330S180 520 40 580"/>
+    <path d="M590 60C440 160 540 290 380 360S200 540 70 600"/>
+    <path d="M570 0C400 90 500 230 340 300S160 500 10 560"/>
+    <path d="M600 100C460 200 560 320 400 390S230 560 110 610"/>
+    <path d="M560 -20C380 60 480 200 320 270S140 480 -20 540"/>
+  </svg>
+  <div class="wrap">
+    <span class="label">Hair salon · North York</span>
+    <h1><span class="w"><span>Hair,</span></span> <span class="w"><span style="animation-delay:.12s">beautifully</span></span><br><span class="w"><span style="animation-delay:.24s"><em>yours.</em></span></span></h1>
+    <div class="hero-row">
+      <p>Cuts, colour and styling by master stylist Joe and the Vadaro team. Clients have trusted them for more than twenty years.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-d" style="background:var(--ivory);color:var(--ink)" href="tel:+14165191140">Book · (416) 519-1140</a><a class="btn btn-l" href="#services">Services</a></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap intro">
+    <div class="rv">
+      <span class="label">The salon</span>
+      <h2>A place that feels <em>like home</em>, with results that turn heads.</h2>
+      <p>At Salon Vadaro, every appointment starts with listening. Joe reads your face shape, your style and the latest trends, then creates a look that's truly yours.</p>
+      <p>Our bright, modern salon on Sheppard Avenue East welcomes the whole family, from first haircuts to colour transformations and special-occasion blowouts.</p>
+      <div class="nums">
+        <div><b data-count="4.8" data-dec="1">0</b><span>Google rating</span></div>
+        <div><b data-count="156">0</b><span>Reviews</span></div>
+        <div><b>20+</b><span>Years of clients</span></div>
+      </div>
+    </div>
+    <div class="pics rv"><div class="p1" data-bg="stations"></div><div class="p2" data-bg="waves"></div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head rv"><div><span class="label">Services</span><h2>What we do best</h2></div><a class="btn btn-l" href="tel:+14165191140">Call to book</a></div>
+    <div class="svc-list">
+      <div class="svc-row rv"><span class="n">01</span><h3>Cut &amp; Style</h3><p>Precision cuts tailored to your face shape, personality and lifestyle.</p><span class="ar">→</span></div>
+      <div class="svc-row rv"><span class="n">02</span><h3>Colour</h3><p>Rich, dimensional colour, from subtle refreshes to bold new shades.</p><span class="ar">→</span></div>
+      <div class="svc-row rv"><span class="n">03</span><h3>Balayage &amp; Highlights</h3><p>Hand-painted, sun-kissed dimension that grows out beautifully.</p><span class="ar">→</span></div>
+      <div class="svc-row rv"><span class="n">04</span><h3>Lightening</h3><p>Careful bleaching and toning that protects the health of your hair.</p><span class="ar">→</span></div>
+      <div class="svc-row rv"><span class="n">05</span><h3>Blowouts</h3><p>Smooth, bouncy, camera-ready hair for any occasion.</p><span class="ar">→</span></div>
+      <div class="svc-row rv"><span class="n">06</span><h3>Family Cuts</h3><p>Women, men and kids. A one-stop salon for the whole family.</p><span class="ar">→</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="rv" style="max-width:640px"><span class="label">Your stylists</span><h2 style="font-size:clamp(40px,5vw,66px);margin-top:14px">The people behind the chair</h2></div>
+    <div class="team-grid">
+      <div class="member rv" data-i="J"><span class="role">Master stylist &amp; colourist</span><h3>Joe</h3><p>Clients call him a "hair magician." Joe knows what suits you, what's trending and what fits your personality. Some clients have been with him for over twenty years.</p></div>
+      <div class="member rv" data-i="L"><span class="role">Stylist</span><h3>Lena</h3><p>Warm, honest and welcoming. Lena makes sure every guest feels at home and leaves happy with their hair.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="label">Inside Vadaro</span><h2 style="font-size:clamp(40px,5vw,66px);margin-top:14px">The space</h2></div>
+    <div class="gal rv" id="gal"></div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <span class="label">Client love</span>
+    <div class="big-stars" style="margin-top:14px">★★★★★</div>
+    <div class="slider" id="slider"></div>
+    <div class="ctrl"><button id="pv" aria-label="Previous">←</button><button id="nx" aria-label="Next">→</button></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="visit rv">
+      <div class="info">
+        <span class="label">Visit</span>
+        <h2>Come see us</h2>
+        <p><b>2035 Sheppard Ave E, Unit 2</b></p>
+        <p class="addr">North York, ON M2J 0A8 · <a href="tel:+14165191140">(416) 519-1140</a></p>
+        <table class="hours" id="hours"></table>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn btn-d" href="tel:+14165191140">Book by phone</a><a class="btn btn-l" href="https://www.google.com/maps/dir/?api=1&destination=Salon+Vadaro+2035+Sheppard+Ave+E+North+York" target="_blank" rel="noopener">Directions</a></div>
+      </div>
+      <div class="map"><iframe loading="lazy" title="Map to Salon Vadaro" src="https://www.google.com/maps?q=Salon+Vadaro,+2035+Sheppard+Ave+E+%232,+North+York,+ON+M2J+0A8&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><div class="logo">VADARO<small>SALON</small></div><p>2035 Sheppard Ave E #2, North York · <a href="tel:+14165191140">(416) 519-1140</a></p><p style="margin-top:8px;font-size:13px">© <span id="yr"></span> Salon Vadaro</p></div></footer>
+<div class="callbar"><a class="btn btn-d" href="tel:+14165191140">Call</a><a class="btn btn-d" style="background:var(--gold)" href="https://www.google.com/maps/dir/?api=1&destination=Salon+Vadaro+2035+Sheppard+Ave+E+North+York" target="_blank" rel="noopener">Directions</a></div>
+<div class="lb" id="lb"><button aria-label="Close">×</button><img alt=""></div>
+
+<script>
+const P={
+ entry:"gps-cs-s/ANWiy9R3CF_TxK4rbcsBwQu4PtL_UL8_VsI7uUtC1JyizUeYJSM0WbBDioSi2H3SeOXAv_OjQ1xR8inAwVYSxrATTBniVJpRRqGPPSY5A51rb524y3uYubBUTf9UWyJ-W65jGkBuXd6uVA",
+ floor:"gps-cs-s/ANWiy9Q8FDOvZncLZ4YE1gv6oKDR7o7hRIATtO3Sf1uSsad0yHXlCgRU_NZ4PfEuyYNSPOgjYfU6kE_8-4DCYl5DVayL4CE6WzGMNCXNTRFzcYCLo127Fu0iaXzm9wgCsYxZdXvei-jyQQ",
+ shelf:"gps-cs-s/ANWiy9SLOWVDl0ScSOnpkyW8PRDph6lpgxQrKVug1zIGW6TFzaCnVE2C2JELc3f5EPJJdBJSreugU9KZCLJ0jT6DktOjEDYU81kKtQljcEnd9iV2jIFxFYQaE7Ho05l3KdsiDIBUjUux",
+ stations:"gps-cs-s/ANWiy9Qpjr0AgTO_ENrpbNb87cLImCKx6PcGvGqL8Pt8jSP7btdphlv4rK8dknoquR8m8_ZakiP7F6A81KcbTJ29qfI97cop8psZpGMtFVvwJJELdEKg3tnGzLW8ShBMuGNWZ6-b8oIMMA",
+ waves:"gps-cs-s/ANWiy9ReAj6BHK73PvpgoC562eT7klfnLxhr0pCNnOT3m7jjkNzoyD4MnDModU8llzXIb6hZ5ieI252ltnSBtYKtABhMBYg3v2XhcE21sP82FOKzGlUVC7DgmDyOIpLOLPU9zf30cV0",
+ lounge:"gps-cs-s/ANWiy9QlNwGQMNVXZS4nnaDCHBDa6VTuGCOpN2XHbfvlQUsS-gXF8_drOUxDLzVxWNztMWUb4a8HccQEUVSclfkE0YjfPZ5cMFA7t4t8fVydfAk-J1GhkPwKgeclSwku7__4qls6UKvJBA"
+};
+const img=(k,w=1600,h=1100)=>`https://lh3.googleusercontent.com/${P[k]}=w${w}-h${h}-k-no`;
+const HOURS=[null,null,[600,1080],[600,1080],[600,1140],[600,1140],[540,1020]];
+const REVIEWS=[
+ ["Pauline F.","I have been going to Joe at Salon Vadaro for over 17 years and I can honestly say I have never walked out of his salon anything less than extremely happy. His attention to detail and genuine talent is unmatched."],
+ ["Priyanka C.","Joe is the best! He just knows what you need, what the trend is, what goes with the personality, face shape. HAIR MAGICIAN!"],
+ ["Josie A.","I have been a client of Joe's for over 20 years. He has coloured and styled my hair many different shades and many different styles and it always looks fabulous."],
+ ["Michael A.","I’ve been going to Salon Vadaro for over 5 years, and it truly is the best salon I’ve found in the city. It’s a one-stop shop for our whole family, we all come here!"],
+ ["Desimira D.","A beautiful hairstyle that I’ll keep going forward. Joe understood exactly what I wanted, and I highly recommend him. This will definitely be my go-to place from now on."]
+];
+const GAL=["entry","stations","lounge","waves","shelf"];
+</script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+document.getElementById('burger').onclick=()=>document.getElementById('links').classList.toggle('open');
+document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+document.querySelectorAll('[data-bg]').forEach(e=>e.style.backgroundImage=`url(${img(e.dataset.bg)})`);
+const gal=document.getElementById('gal'),lb=document.getElementById('lb');
+GAL.forEach(k=>{const b=document.createElement('button');b.innerHTML=`<img loading="lazy" src="${img(k,1000,800)}" alt="Inside Salon Vadaro">`;b.querySelector('img').onerror=()=>b.remove();b.onclick=()=>{lb.querySelector('img').src=img(k,1800,1400);lb.classList.add('on')};gal.appendChild(b)});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+const sl=document.getElementById('slider');let cur=0,t;
+REVIEWS.forEach(([n,q],i)=>sl.insertAdjacentHTML('beforeend',`<div class="slide ${i?'':'on'}"><p>“${q}”</p><b>${n} · Google review</b></div>`));
+const go=i=>{sl.children[cur].classList.remove('on');cur=(i+REVIEWS.length)%REVIEWS.length;sl.children[cur].classList.add('on')};
+const auto=()=>{clearInterval(t);t=setInterval(()=>go(cur+1),7000)};auto();
+document.getElementById('nx').onclick=()=>{go(cur+1);auto()};document.getElementById('pv').onclick=()=>{go(cur-1);auto()};
+const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const fmt=m=>{let h=Math.floor(m/60),mm=m%60,ap=h>=12?'p.m.':'a.m.';h=h%12||12;return h+(mm?':'+String(mm).padStart(2,'0'):'')+' '+ap};
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Toronto'}));const d=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+const ht=document.getElementById('hours');[1,2,3,4,5,6,0].forEach(i=>{const h=HOURS[i];ht.insertAdjacentHTML('beforeend',`<tr class="${i===d?'today':''}"><td>${days[i]}</td><td>${h?fmt(h[0])+' – '+fmt(h[1]):'Closed'}</td></tr>`)});
+const st=document.getElementById('status'),h=HOURS[d],open=h&&mins>=h[0]&&mins<h[1];st.classList.add(open?'open':'closed');st.lastElementChild.textContent=open?`Open · until ${fmt(h[1])}`:'Closed now';
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.count,dec=+(el.dataset.dec||0),t0=performance.now();const step=tt=>{const p=Math.min((tt-t0)/1400,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(dec);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);co.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(e=>co.observe(e));
+</script>
+</body>
+</html>
